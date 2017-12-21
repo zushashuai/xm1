@@ -1,0 +1,68 @@
+{extend name="public/base"}
+{block name="center_top"}
+    <li><a href="{:url('Admin/index')}">管理员列表</a></li>
+    <li class="am-active">添加</li>
+{/block}
+{block name="center"}
+    <div class="tpl-portlet-components">
+        <div class="portlet-title">
+            <div class="caption font-green bold">
+                <span class="am-icon-code"></span> 表单
+            </div>
+        </div>
+        <div class="tpl-block ">
+            <div class="am-g tpl-amazeui-form">
+                <div class="am-u-sm-12 am-u-md-9">
+                    <form class="am-form am-form-horizontal" action="{:url('Admin/insert')}" method="post" enctype="multipart/form-data">
+                        <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">账号</label>
+                            <div class="am-u-sm-9">
+                                <input type="text" id="username" name="username" placeholder="账号">
+                                <small style="display:inline-block;"></small>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">姓名</label>
+                            <div class="am-u-sm-9">
+                                <input type="text" id="name" name="name" placeholder="姓名">
+                                <small style="display:inline-block;"></small>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">密码</label>
+                            <div class="am-u-sm-9">
+                                <input type="password" id="pass" name="pass" placeholder="密码">
+                                <small style="display:inline-block;"></small>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">确认密码</label>
+                            <div class="am-u-sm-9">
+                                <input type="password" id="repass" placeholder="确认密码">
+                                <small style="display:inline-block;"></small>
+                            </div>
+                        </div>
+                        
+                        <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">头像</label>
+                            <div class="am-u-sm-9">
+                                <input type="file" id="picname" name="picname">
+                                <small style="display:inline-block;"></small>
+                            </div>
+                        </div>
+
+                        <div class="am-form-group">
+                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                <button type="submint" class="am-btn am-btn-primary">保存修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{/block}
+{block name="js"}
+    <script src="__STATIC__/admin/js/adminindex.js"></script>
+{/block}

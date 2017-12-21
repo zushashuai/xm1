@@ -1,0 +1,7 @@
+{extend name="public/base"}
+{block name="title"}111{/block}
+{block name="css"}{/block}
+{block name="header"}头部显示{/block}
+{block name="center"}中间显示{/block}
+{block name="footer"}{__block__}{/block}
+{block name="script"}{/block}
